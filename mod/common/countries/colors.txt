@@ -1,0 +1,21 @@
+# Color definitions for the mod
+# This file will be updated dynamically via script effects
+# We include a few default colors for reference
+
+GER = {
+	color = rgb { 80 80 80 }
+	color_ui = rgb { 100 100 100 }
+}
+
+USA = {
+	color = rgb { 40 40 160 }
+	color_ui = rgb { 60 60 180 }
+}
+
+POL = {
+	color = rgb { 160 40 40 }
+	color_ui = rgb { 180 60 60 }
+}
+
+# Default fallback for color picker updates
+# The script will add/modify tags dynamically

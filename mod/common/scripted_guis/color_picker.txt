@@ -1,0 +1,54 @@
+# Scripted GUI definitions for color picker
+scripted_gui = {
+	# Main Color Picker GUI
+	color_picker_gui = {
+		context_type = selected_country_context
+		window_name = "gui_color_picker"
+		
+		# Conditions to show the GUI (e.g., player country selected or via a hotkey/button)
+		visible = {
+			is_player = yes
+			has_country_flag = yes # Or any trigger to open it
+		}
+		
+		# Effects for buttons
+		btn_apply_color_on_click = {
+			# Get current RGB values (stored in variables or scripted localization)
+			# In HOI4, we can use set_country_color effect
+			# Note: color_picker values would be passed via variables in a full implementation
+			# Here we demonstrate the logic:
+			
+			# Example: set color to { 255 0 0 } for testing
+			# In a real mod, we'd use variables:
+			# set_country_color = { rgb = { $RED$ $GREEN$ $BLUE$ } }
+			
+			# For the demo, let's use a trigger to change the color of the selected country
+			# to a specific color (e.g., red) to show it works.
+			# A full color picker would use a more complex variable system.
+			
+			# Trigger effect on selected country:
+			country = {
+				limit = { is_player = yes }
+				# Change color (example red)
+				set_country_color = { rgb = { 255 0 0 } }
+				# Change UI color
+				set_country_ui_color = { rgb = { 200 0 0 } }
+				
+				# In a real implementation, we'd update colors.txt or use a dynamic tag system
+				# But HOI4 effects can change color directly in-game.
+			}
+			
+			# Close GUI after applying
+			close_gui = { gui_color_picker }
+		}
+		
+		btn_close_picker_on_click = {
+			close_gui = { gui_color_picker }
+		}
+		
+		# Increment/Decrement logic would go here in a full mod using variables
+		# For simplicity in this initial version, we provide the structure.
+		
+		# Note: HOI4 1.15+ supports more complex scripted GUI effects.
+	}
+}

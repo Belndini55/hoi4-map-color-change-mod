@@ -1,0 +1,20 @@
+# Main localization file combining all parts
+l_english:
+ # From color_picker_l_english.yml
+ hoi4_map_color_change_mod_title:0 "Map Color Change Mod"
+ hoi4_map_color_change_mod_desc:0 "Change the color of countries on the map using the color picker."
+ gui_color_picker_title:0 "Country Color Picker"
+ gui_color_picker_desc:0 "Select a color for the selected country."
+ gui_color_picker_apply:0 "Apply Color"
+ gui_color_picker_rgb_label:0 "RGB: "
+ gui_color_picker_red:0 "Red"
+ gui_color_picker_green:0 "Green"
+ gui_color_picker_blue:0 "Blue"
+ 
+ # From color_picker_triggers_l_english.yml
+ gui_color_picker_trigger_open:0 "Open Color Picker"
+ gui_color_picker_effect_apply:0 "Apply Country Color"
+ 
+ # From mod_l_english.yml
+ hoi4_map_color_change_mod_name:0 "Map Color Change Mod"
+ hoi4_map_color_change_mod_description:0 "Change country colors on the map using the color picker."

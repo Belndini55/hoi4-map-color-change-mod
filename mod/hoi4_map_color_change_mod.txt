@@ -1,0 +1,27 @@
+# Main mod script file
+# This file ties everything together
+
+# Load localization
+localisation = {
+	file = "localisation/english/color_picker_l_english.yml"
+}
+
+# Load interface
+interface = {
+	file = "interface/color_picker.gui"
+}
+
+# Load scripted GUI
+scripted_gui = {
+	file = "common/scripted_guis/color_picker.txt"
+}
+
+# Load scripted effects
+scripted_effects = {
+	file = "common/scripted_effects/color_picker_effects.txt"
+}
+
+# Load country colors
+country_colors = {
+	file = "common/countries/colors.txt"
+}

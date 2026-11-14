@@ -1,0 +1,28 @@
+# Scripted effects and triggers for the color picker mod
+# This file defines how the color change is applied
+
+# Effect to change country color dynamically
+effect = {
+	name = "change_country_color_effect"
+	parameters = {
+		red = 255
+		green = 255
+		blue = 255
+	}
+	scope = country {
+		limit = { is_player = yes }
+		set_country_color = { rgb = { @red @green @blue } }
+		set_country_ui_color = { rgb = { @red @green @blue } }
+		# Log for debugging
+		log = "Color changed to @red @green @blue"
+	}
+}
+
+# Trigger to check if color picker should be available
+trigger = {
+	name = "can_open_color_picker"
+	check = {
+		is_player = yes
+		has_country = yes
+	}
+}
