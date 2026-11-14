@@ -1,0 +1,108 @@
+# Interface definition for the color picker
+gui_type = window {
+	name = "gui_color_picker"
+	position = { x = 0.5 y = 0.5 }
+	size = { x = 0.4 y = 0.5 }
+	orientation = "vertical"
+	background = "gfx/interface/backgrounds/window_bg.dds"
+	
+	# Title
+	text = {
+		localization_key = "gui_color_picker_title"
+		position = { x = 0.5 y = 0.05 }
+		font = "generic_font"
+		size = 24
+		color = { 1 1 1 }
+		alignment = "center"
+	}
+	
+	# Color Picker Area (Visual representation)
+	# Note: HOI4 GUI doesn't have a native color picker widget in .gui files,
+	# so we use buttons/sliders or a scripted color selection system.
+	# Here we simulate a color picker with RGB input fields and color buttons.
+	
+	# Red Slider/Input
+	container = {
+		position = { x = 0.1 y = 0.2 }
+		size = { x = 0.8 y = 0.05 }
+		orientation = "horizontal"
+		text = {
+			localization_key = "gui_color_picker_rgb_label"
+			position = { x = 0 y = 0.5 }
+			alignment = "left"
+		}
+		# In real HOI4 modding, we'd use scripted_gui for sliders/inputs.
+		# Here we define buttons to increment/decrement or a text field.
+		button = {
+			name = "btn_red_minus"
+			position = { x = 0.3 y = 0 }
+			size = { x = 0.1 y = 1 }
+			text = { localization_key = "gui_color_picker_red" font = "generic_font" size = 14 }
+			# Effect handled in scripted_gui
+		}
+		button = {
+			name = "btn_red_plus"
+			position = { x = 0.5 y = 0 }
+			size = { x = 0.1 y = 1 }
+			text = { localization_key = "gui_color_picker_red" font = "generic_font" size = 14 }
+		}
+	}
+	
+	# Green Slider/Input
+	container = {
+		position = { x = 0.1 y = 0.3 }
+		size = { x = 0.8 y = 0.05 }
+		orientation = "horizontal"
+		button = {
+			name = "btn_green_minus"
+			position = { x = 0.3 y = 0 }
+			size = { x = 0.1 y = 1 }
+			text = { localization_key = "gui_color_picker_green" font = "generic_font" size = 14 }
+		}
+		button = {
+			name = "btn_green_plus"
+			position = { x = 0.5 y = 0 }
+			size = { x = 0.1 y = 1 }
+			text = { localization_key = "gui_color_picker_green" font = "generic_font" size = 14 }
+		}
+	}
+	
+	# Blue Slider/Input
+	container = {
+		position = { x = 0.1 y = 0.4 }
+		size = { x = 0.8 y = 0.05 }
+		orientation = "horizontal"
+		button = {
+			name = "btn_blue_minus"
+			position = { x = 0.3 y = 0 }
+			size = { x = 0.1 y = 1 }
+			text = { localization_key = "gui_color_picker_blue" font = "generic_font" size = 14 }
+		}
+		button = {
+			name = "btn_blue_plus"
+			position = { x = 0.5 y = 0 }
+			size = { x = 0.1 y = 1 }
+			text = { localization_key = "gui_color_picker_blue" font = "generic_font" size = 14 }
+		}
+	}
+	
+	# Apply Button
+	button = {
+		name = "btn_apply_color"
+		position = { x = 0.5 y = 0.6 }
+		size = { x = 0.2 y = 0.1 }
+		text = { localization_key = "gui_color_picker_apply" font = "generic_font" size = 18 }
+		alignment = "center"
+		# Effect handled in scripted_gui
+	}
+	
+	# Close Button
+	button = {
+		name = "btn_close_picker"
+		position = { x = 0.5 y = 0.75 }
+		size = { x = 0.1 y = 0.05 }
+		text = { localization_key = "gui_color_picker_desc" font = "generic_font" size = 12 }
+		alignment = "center"
+		# Effect: close_gui
+	}
+}
